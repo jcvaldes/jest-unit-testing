@@ -1,22 +1,11 @@
 import { getModelToken } from '@nestjs/mongoose';
 import { Test } from '@nestjs/testing';
-import { CreateUserDto } from '../dto/create-user.dto';
-import { UpdateUserDto } from '../dto/update-user.dto';
 import { User } from '../schemas/user.schema';
-
-import { UsersController } from '../users.controller';
 import { UsersRepository } from '../users.repository';
 import { UsersService } from '../users.service';
 
 import { userStub } from './stubs/user.stub';
 import { UserModel } from './support/user.model';
-
-// jest.mock('../users.service');
-// constructor(private readonly usersRepository: UsersRepository) {}
-
-// async getUserById(userId: string): Promise<User> {
-//   return this.usersRepository.findOne({ userId });
-// }
 
 describe('UsersService', () => {
   let usersService: UsersService;
