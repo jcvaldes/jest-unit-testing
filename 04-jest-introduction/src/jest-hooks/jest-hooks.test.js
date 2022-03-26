@@ -12,7 +12,7 @@ afterAll(() => {
 });
 // describe("scopping", () => {
 //   beforeEach(() => {
-  
+
 //   });
 //   it ("caso 1",  () => {
 
