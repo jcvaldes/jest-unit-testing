@@ -2,7 +2,7 @@
 
 import { calculator } from ".";
 test("sum calc", () => {
-  // Arrange
+  // Arrange y Act
   const result = calculator.sum(2, 2);
 
   //Assert

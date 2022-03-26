@@ -2,10 +2,10 @@ const saludar = (nombre) => `Hola ${nombre}`;
 
 console.log(saludar("Juan"));
 
-function expect(actual) {
+function expect(result) {
   return {
     toBe(expect) {
-      if (actual !== expect) {
+      if (result !== expect) {
         throw new Error("Prueba no exitosa");
       }
     },
@@ -22,5 +22,10 @@ function it(title, callback) {
 }
 
 it("La funcion saluda", () => {
-  expect(saludar("Juan")).toBe("Hola Juan");
+  // arrange
+  let result;
+  // act
+  result = saludar("Juan");
+  // assert
+  expect(result).toBe("Hola Juan");
 });
