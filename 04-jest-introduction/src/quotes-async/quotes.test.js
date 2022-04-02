@@ -25,13 +25,19 @@ test("getQuoteProm ejecuta una Promesa y devuelve resolve", () => {
   //     "No creas todo lo que leas en internet, por Benjamin Franklin"
   //   );
   // });
-  return expect(getQuoteProm()).resolves.toBe(
+
+  //arrange y act
+  const prom = getQuoteProm();
+  // assert
+  return expect(prom).resolves.toBe(
     "No creas todo lo que leas en internet, por Benjamin Franklin"
   );
 });
 test("getQuoteProm con Promesa y devuelve reject", () => {
-  getQuoteProm(2).catch((err) => expect(err));
-  // return expect(getQuoteProm()).rejects.toMatch('error');
+  // getQuoteProm(2).catch((err) => expect(err));
+  return expect(getQuoteProm(2)).rejects.toMatch(
+    "Error generado intencionalmente"
+  );
 });
 
 test("getQuoteProm con Promesa y async await", async () => {
